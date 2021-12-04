@@ -1,25 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Nav from './components/navbar'
+import About from './components/about';
+import {Home, Landing} from './components/home';
 
-function App() {
+class App extends React.Component {
+  constructor(props){
+    super(props)
+    this.navigate = this.navigate.bind(this)
+    this.state={
+      page: ''
+    }
+  }
+    navigate(page){
+this.setState({
+  
+  page: page.target.id
+})
+    }
+
+  
+  render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {this.state.page =='home' ? <Landing /> : null}
+     <Nav navigate={this.navigate}/>
+     {(() => {
+        switch (this.state.page) {
+          case 'home':
+            return <Home />
+            case 'about':
+              return <About />
+         
+          default:
+            return <Home />
+        }
+      })()}
     </div>
   );
 }
+}
+
+
+
 
 export default App;

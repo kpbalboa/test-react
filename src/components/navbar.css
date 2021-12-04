@@ -1,0 +1,15 @@
+.nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: #FFC300;
+    margin: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    transition: 3s ease-in;
+}
+
+.nav li{
+    padding: 20px;
+    list-style: none;
+}
