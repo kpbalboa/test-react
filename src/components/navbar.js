@@ -7,8 +7,8 @@ class Nav extends React.Component{
     }
     render(){
         return (
-            <div>
-                <ul className='nav'>
+            <div className='navdiv'>
+                <ul  className='nav'>
                      <NavButton navigate={this.props.navigate} id='home' />
                     <NavButton navigate={this.props.navigate}  id='about' />
                 </ul>

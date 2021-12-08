@@ -23,7 +23,7 @@ this.setState({
   render(){
   return (
     <div className="App">
-      {this.state.page =='home' ? <Landing /> : null}
+      {this.state.page ==='home' || this.state.page ==='' ? <Landing /> :  null}
      <Nav navigate={this.navigate}/>
      {(() => {
         switch (this.state.page) {
