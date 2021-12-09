@@ -2,15 +2,13 @@ import './navbar.css';
 import React from 'react';
 
 class Nav extends React.Component{
-    constructor(props){
-        super(props)
-    }
+    
     render(){
         return (
             <div className='navdiv'>
                 <ul  className='nav'>
-                     <NavButton navigate={this.props.navigate} id='home' />
-                    <NavButton navigate={this.props.navigate}  id='about' />
+                     <NavButton navigate={this.props.navigate} id='home' key='home'/>
+                    <NavButton navigate={this.props.navigate}  id='about' key='about'/>
                 </ul>
             </div>
         )
@@ -19,9 +17,7 @@ class Nav extends React.Component{
 
 
 class NavButton extends React.Component{
-    constructor(props){
-        super(props)
-    }
+    
     render(){
         return (
              <li id={this.props.id} onClick={this.props.navigate}>{this.props.id}</li>

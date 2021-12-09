@@ -47,9 +47,11 @@ class Landing extends React.Component{
             {particles}
 
             
-                <h1>This is a landing page</h1>
+                <div className="title"><h1>Kevin Balboa</h1>
+                <h2>A gentleman and a scholar </h2>
+                </div>
                 <img src={headshot} />
-
+                
             </div>
         )
     }
