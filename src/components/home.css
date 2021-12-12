@@ -1,39 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+/* @import code from '../assets/code.jpg' */
+
+
 
 .landing{
-    background: #1e1e1e;
-    height: calc(100vh - 60px);
+    background: #F3EFF5;
+    height: calc(100vh - 70px);
     position: sticky;
     top: 0px;
-    z-index: -1;
+    /* z-index: -1; */
     overflow: hidden;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-gap: 20px;
 }
 
-.landing img{
-    height: 80vh;
-    width: auto;
-    position: absolute;
-    bottom: 0px;
-    left: 50vw;
-    
+.headshot{
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: #67A2A2;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+margin-left: -100px;
+}
+
+.headshot img{
+  height: 80vh;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.code{
+  background-image: url(../assets/code.jpg);
+  background-size: cover;
+  background-repeat: none;
+  clip-path: polygon(0 0, 90% 0, 80% 100%, 0% 100%);
+  margin-right: calc(-6vw - 10px);
 }
 
 .landing .title{
-    height: 80vh;
-    width: auto;
-    position: absolute;
-    top: 25vh;
-    left: 15vw;
-    color: #FFC300;
+    background-color: #F7EE50;
+    position: relative;
+    color: #67A2A2;
     font-family: 'Bangers', cursive;
-    font-size: 46px;
-    letter-spacing: 3px;
-}
-.title h2{
-  color: white;
+    font-size: 2.5vw;
+    letter-spacing: 4px;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    margin-right: calc(-6vw - 10px);
 }
 
-@keyframes float {
+.title div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+} 
+
+
+
+.title h2{
+  color: #0D0A0B;
+}
+
+/* @keyframes float {
     from {
       transform: translate(5%, 5%);
     }
@@ -74,7 +111,7 @@
     from {transform: translate(500%, 500%);}
     to {transform: translate(-500%, -500%);}
   }
- 
+  */
 
 .home{
     background: #353535;

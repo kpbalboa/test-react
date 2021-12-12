@@ -1,9 +1,11 @@
 .nav{
     display: flex;
     justify-content: space-around;
-    background-color: #FFC300;
+    background-color: #F7EE50;
     margin: 0;
     transition: 3s ease-in;
+    border-top: solid #0D0A0B 5px;
+    border-bottom: solid #0D0A0B 5px;
 }
 
 .nav li{
