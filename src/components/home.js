@@ -1,6 +1,6 @@
 import React from "react";
 import "./home.css";
-import headshot from "../assets/kevinAvitaryellowShirt2.png";
+import headshot from "../assets/kevinAvitarblackShirtv.svg";
 import code from '../assets/code.jpg'
 
 
