@@ -1,21 +1,64 @@
 import React from "react";
 import "./home.css";
 import headshot from "../assets/kevinAvitarblackShirtv.svg";
-import code from '../assets/code.jpg'
+import angular from "../assets/Angular.svg";
+import css from "../assets/CSS3.svg";
+import html from "../assets/HTML5.svg";
+import javascript from "../assets/Javascript.svg";
+import node from "../assets/Node.svg";
+import postgress from "../assets/Postgresql.svg";
+import react from "../assets/React.svg";
+import Typescript from "../assets/Typescript.svg";
 
+import code from "../assets/code.jpg";
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
-
   }
   render() {
     return (
       <div className="home">
-        this is home
-        <img src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" />
-        <img src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" />
-        <img src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" />
+        <div className="tech">
+          <div className='techTitle'>
+            <h1>Technical Knowledge</h1>
+          </div>
+          <div className="techGroup">
+            <div className="techItem">
+              <img src={angular} />
+
+              <span>ANGULAR</span>
+            </div>
+            <div className="techItem">
+              <img src={css} />
+              <span>CSS</span>
+            </div>
+            <div className="techItem">
+              <img src={html} />
+              <span>HTML</span>
+            </div>
+            <div className="techItem">
+              <img src={javascript} />
+              <span>JAVASCRIPT</span>
+            </div>
+            <div className="techItem">
+              <img src={node} />
+              <span>NODE.JS</span>
+            </div>
+            <div className="techItem">
+              <img src={postgress} />
+              <span>POSTGRESS</span>
+            </div>
+            <div className="techItem">
+              <img src={react} />
+              <span>REACT</span>
+            </div>
+            <div className="techItem">
+              <img src={Typescript} />
+              <span>TYPESCRIPT</span>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
@@ -40,13 +83,12 @@ class Home extends React.Component {
 class Landing extends React.Component {
   constructor(props) {
     super(props);
-    this.state= {
-        mousex : 0,
-        mousey: 0,
-    }
+    this.state = {
+      mousex: 0,
+      mousey: 0,
+    };
   }
 
-  
   // randNum(size){
   //     return Math.random() * (size);
   // }
@@ -62,18 +104,16 @@ class Landing extends React.Component {
         {/* {particles} */}
 
         <div className="title">
-            <div>
-          <h1>Kevin Balboa</h1>
-          
-          <h2>Front-End Developer</h2>
+          <div>
+            <h1>Kevin Balboa</h1>
+
+            <h2>Front-End Developer</h2>
           </div>
-         
         </div>
         <div className="headshot">
-            <img src={headshot} />
+          <img src={headshot} />
         </div>
         <div className="code"></div>
-        
       </div>
     );
   }

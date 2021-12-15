@@ -8,7 +8,7 @@
     height: calc(100vh - 70px);
     position: sticky;
     top: 0px;
-    /* z-index: -1; */
+    z-index: -1;
     overflow: hidden;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -41,7 +41,7 @@ margin-left: -100px;
   background-size: cover;
   background-repeat: none;
   clip-path: polygon(0 0, 90% 0, 80% 100%, 0% 100%);
-  margin-right: calc(-6vw - 10px);
+  margin-right: calc(-5vw - 10px);
 }
 
 .landing .title{
@@ -52,7 +52,7 @@ margin-left: -100px;
     font-size: 2.5vw;
     letter-spacing: 4px;
     clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-    margin-right: calc(-6vw - 10px);
+    margin-right: calc(-5vw - 10px);
 }
 
 .title div{
@@ -69,6 +69,7 @@ margin-left: -100px;
 .title h2{
   color: #0D0A0B;
 }
+
 
 /* @keyframes float {
     from {
@@ -114,8 +115,46 @@ margin-left: -100px;
   */
 
 .home{
-    background: #353535;
+    background: #F3EFF5;
 z-index: 2;
 }
 
 
+.techGroup{
+display: grid;
+grid-template-columns: auto auto auto;
+width: 60vw;
+grid-gap: 20px;
+background-color: #0D0A0B;
+color: #F3EFF5;
+height: 500px;
+}
+
+.techItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.techItem img{
+  max-height: 100px;
+}
+.tech{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 500px;
+position: relative;
+}
+
+.techTitle{
+  width: 30vw;
+  background-color: #0D0A0B;
+color: #F3EFF5;
+height: 100%;
+}
+.techTitle h1{
+  position: absolute;
+  top: 50%;
+  margin: auto;
+}
