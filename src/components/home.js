@@ -19,49 +19,93 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home">
-        <div className="tech">
-          <div className='techTitle'>
-            <h1>Technical Knowledge</h1>
-          </div>
-          <div className="techGroup">
-            <div className="techItem">
-              <img src={angular} />
-
-              <span>ANGULAR</span>
-            </div>
-            <div className="techItem">
-              <img src={css} />
-              <span>CSS</span>
-            </div>
-            <div className="techItem">
-              <img src={html} />
-              <span>HTML</span>
-            </div>
-            <div className="techItem">
-              <img src={javascript} />
-              <span>JAVASCRIPT</span>
-            </div>
-            <div className="techItem">
-              <img src={node} />
-              <span>NODE.JS</span>
-            </div>
-            <div className="techItem">
-              <img src={postgress} />
-              <span>POSTGRESS</span>
-            </div>
-            <div className="techItem">
-              <img src={react} />
-              <span>REACT</span>
-            </div>
-            <div className="techItem">
-              <img src={Typescript} />
-              <span>TYPESCRIPT</span>
-            </div>
-          </div>
-        </div>
+        <Tech />
+        <Projects />
       </div>
     );
   }
+}
+
+function Tech(props){
+  return (
+    <div className="tech">
+    <div className='techTitle'>
+      <h2>Technical Knowledge</h2>
+    </div>
+    <div className="techGroup">
+      <div className="techItem">
+        <img src={angular} />
+
+        <span>ANGULAR</span>
+      </div>
+      <div className="techItem">
+        <img src={css} />
+        <span>CSS</span>
+      </div>
+      <div className="techItem">
+        <img src={html} />
+        <span>HTML</span>
+      </div>
+      <div className="techItem">
+        <img src={javascript} />
+        <span>JAVASCRIPT</span>
+      </div>
+      <div className="techItem">
+        <img src={node} />
+        <span>NODE.JS</span>
+      </div>
+      <div className="techItem">
+        <img src={postgress} />
+        <span>POSTGRESS</span>
+      </div>
+      <div className="techItem">
+        <img src={react} />
+        <span>REACT</span>
+      </div>
+      <div className="techItem">
+        <img src={Typescript} />
+        <span>TYPESCRIPT</span>
+      </div>
+    </div>
+  </div>
+  )
+}
+
+function Projects(props){
+  return(
+    <div className="projects">
+        <div className="projectsTitle">
+<h2>PROJECTS</h2>
+        </div>
+
+        <div className="project">
+            <div className="projectDesc" id="lifeD">
+              <h3>Game Life Counter <br /> (work in progress)</h3>
+              <p>Magic the gathering card game companion app designed to track game data and record individual player statistics.</p>
+              <span>Project Breakdown</span>
+              <ul>
+                <li>Cordova - Mobile Application Framework</li>
+                <li>Socket.io - Library for bi-directional server communication allows users to interact realtime</li>
+                <li>Angular - Front-End Built for snappy user experiences (considering rebuild with react)</li>
+                <li>Express/Node.JS - Back-End built for handling user data and 
+                  updating game data for local users
+                </li>
+                <li>Postgres - Database for storing user data</li>
+              </ul>
+            </div>
+            <div className="projectSample" id="lifeP"><img src="https://sideboard.app/assets/images/hero.jpg"/></div>
+        
+            <div className="projectDesc"></div>
+            <div className="projectSample"></div>
+
+            <div className="projectDesc"></div>
+            <div className="projectSample"></div>
+
+            <div className="projectDesc"></div>
+            <div className="projectSample"></div>
+        </div>
+    </div>
+  )
 }
 
 // function Welcome(props) {
